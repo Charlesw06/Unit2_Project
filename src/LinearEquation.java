@@ -23,5 +23,14 @@ public class LinearEquation {
         return y1 - (slope() * x1);
     }
 
+    public String equationOfLine() {
+        return "y = " + slope() + "x + " + yIntercept();
+    }
 
+    public String toString() {
+        String firstPoint = "First point: (" + x1 + "," + y1 + ")";
+        String secondPoint = "Second point: (" + x2 + "," + y2 + ")";
+        String slope = "Slope of line: " + slope();
+        return firstPoint + "\n" + secondPoint + "\n";
+    }
 }

@@ -23,6 +23,7 @@ LinearEquation class -
 
         public String toString()
             Prints out the information of the line including:
+             - The first point and second point
              - The slope of the line
              - The y-intercept of the line
              - The equation of the line
@@ -40,7 +41,7 @@ Step 4: Sets int userX1 and userY1 to the corresponding coordinates from the inp
 Step 5: Prompts the user to enter point 2
 Step 6: Sets int userX2 and userY2 to the corresponding coordinates from the input
 Step 7: Creates new LinearEquation object using userX1, userY1, userX2, and userY2
-Step 8: Prints out information of the line
+Step 8: Prints out information of the line using the toString() method
 Step 9: Prompts user for a x value on the line that is a double
-Step 10: Sets userX to user's input
+Step 10: Sets double userX to user's input
 Step 11: Prints out corresponding coordinates for user's x-value
