@@ -7,6 +7,7 @@ LinearEquation class -
 
     Constructor:
         public LinearEquation (int x1, int x2, int y1, int y2)
+            This constructor will create a new LinearEquation object
 
     Methods:
         public double distance()
@@ -24,10 +25,10 @@ LinearEquation class -
         public String toString()
             Prints out the information of the line including:
              - The first point and second point
-             - The slope of the line
-             - The y-intercept of the line
-             - The equation of the line
-             - The distance between point 1 and point 2
+             - The slope of the line rounded to hundredths place
+             - The y-intercept of the line rounded to hundredths place
+             - The equation of the line with slope in fraction form
+             - The distance between point 1 and point 2 rounded to the hundredths place
 
         public String newPoint(double userX)
             This method will return the corresponding coordinates for the x-value used as a parameter
@@ -35,12 +36,12 @@ LinearEquation class -
 EquationRunner.java -
 
 Step 1: Imports scanner utility
-Step 2: Welcomes user
-Step 3: Prompts the user to enter point 1
-Step 4: Sets int userX1 and userY1 to the corresponding coordinates from the input
-Step 5: Prompts the user to enter point 2
-Step 6: Sets int userX2 and userY2 to the corresponding coordinates from the input
-Step 7: Creates new LinearEquation object using userX1, userY1, userX2, and userY2
+Step 2: Welcomes user using print statement
+Step 3: Prompts the user to enter point 1 using scanner utility
+Step 4: Sets int x1 and y1 to the corresponding coordinates from the input using substring(), indexOf(), and length()
+Step 5: Prompts the user to enter point 2 using scanner utility
+Step 6: Sets int x2 and y2 to the corresponding coordinates from the input
+Step 7: Creates new LinearEquation object using x1, x2, y1, and y2
 Step 8: Prints out information of the line using the toString() method
 Step 9: Prompts user for a x value on the line that is a double
 Step 10: Sets double userX to user's input
