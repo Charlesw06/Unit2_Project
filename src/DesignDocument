@@ -38,11 +38,13 @@ EquationRunner.java -
 Step 1: Imports scanner utility
 Step 2: Welcomes user using print statement
 Step 3: Prompts the user to enter point 1 using scanner utility
-Step 4: Sets int x1 and y1 to the corresponding coordinates from the input using substring(), indexOf(), and length()
-Step 5: Prompts the user to enter point 2 using scanner utility
-Step 6: Sets int x2 and y2 to the corresponding coordinates from the input
-Step 7: Creates new LinearEquation object using x1, x2, y1, and y2
-Step 8: Prints out information of the line using the toString() method
-Step 9: Prompts user for a x value on the line that is a double
-Step 10: Sets double userX to user's input
-Step 11: Prints out corresponding coordinates for user's x-value
+Step 4: Sets userPoint1 to user's input
+Step 5: Sets int x1 and y1 to the corresponding coordinates from the input using parseInt(), substring(), indexOf(), and length()
+Step 6: Prompts the user to enter point 2 using scanner utility
+Step 7: Sets userPoint2 to user's input
+Step 8: Sets int x2 and y2 to the corresponding coordinates from the input using parseInt(), substring(), indexOf(), and length()
+Step 9: Creates new LinearEquation object using x1, x2, y1, and y2
+Step 10: Prints out information of the line using the toString() method
+Step 11: Prompts user for a x-value on the line created by point 1 and point 2
+Step 12: Sets double userX to user's input
+Step 13: Prints out corresponding coordinates for user's x-value using newPoint() method

@@ -1,10 +1,14 @@
 import java.text.DecimalFormat;
+// Imports Decimal format
 public class LinearEquation {
     DecimalFormat twoDForm = new DecimalFormat("#.00");
+    // Sets decimal format to two decimal places
+
     private int x1;
     private int x2;
     private int y1;
     private int y2;
+    // Creates instance variables x1, x2, y1, y2 to represent x-y coordinate values
 
     public LinearEquation(int x1, int x2, int y1, int y2) {
         this.x1 = x1;
@@ -12,22 +16,27 @@ public class LinearEquation {
         this.y1 = y1;
         this.y2 = y2;
     }
+    // Constructor that initializes instance variables to corresponding values
 
     public double distance() {
         return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
     }
+    // Calculates and returns distance between two points
 
     public double slope() {
-        return Math.round((y2 - y1) / (x2 - x1));
+        return Double.parseDouble(twoDForm.format(((double) (y2 - y1)) / (x2 - x1)));
     }
+    // Calculates and returns slope of line created by two points
 
     public double yIntercept() {
-        return Math.round(y1 - (slope() * x1));
+        return Double.parseDouble(twoDForm.format(y1 - (slope() * x1)));
     }
+    // Calculates and returns y-intercept of line created by two points
 
     public String equationOfLine() {
         return "y = " + (y2 - y1) + "/" + (x2 - x1) + "x + " + twoDForm.format(yIntercept());
     }
+    // Returns equation of the line created by two points
 
     public String toString() {
         String firstPoint = "First point: (" + x1 + "," + y1 + ")";
@@ -38,9 +47,11 @@ public class LinearEquation {
         String distance = "Distance between points: " + twoDForm.format(distance());
         return firstPoint + "\n" + secondPoint + "\n" + slope + "\n" + yIntercept + "\n" + lineEquation + "\n" + distance;
     }
+    // Returns information about the line created between two points
 
     public String newPoint(double userX) {
         double userY = slope() * userX + yIntercept();
         return "(" + userX + "," + userY + ")";
     }
+    // Calculates and returns coordinates corresponding to x-value inputted
 }
